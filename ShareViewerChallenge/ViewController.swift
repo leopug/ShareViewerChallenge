@@ -47,7 +47,6 @@ class MainViewController: UIViewController {
             self?.view.addSubview(label)
             
             guard let selfish = self else {return}
-            //guard let theLabel = label else {return}
             NSLayoutConstraint.activate([
                 
                 label.topAnchor.constraint(equalTo: selfish.view.safeAreaLayoutGuide.topAnchor),
