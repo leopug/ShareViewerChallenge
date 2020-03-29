@@ -25,12 +25,13 @@ class MainViewController: UIViewController {
     
     
     func setupShares() {
-
+        
+        //this is just a Proof of Concept
         let shareNames = ["PETR4\n4.55","VVAR3\n5.64","B3SA3\n3 7.22","VVAR3\n5.64","B3SA3\n37.22","NOVA3\n37.22","BIBO3\n37.22","B3SA3\n37.22","B3SA3\n37.22","VVAR3\n5.64","B3SA3\n3 7.22","VVAR3\n5.64","FINO3\n37.22","NOVA3\n37.22","FINE3\n37.22","FONO3\n37.22","FINA3\n37.22"]
                 
         var shareControl = 0
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+        Timer.scheduledTimer(withTimeInterval: 0.6 , repeats: true) {
             [weak self] (timer) in
             
             if shareControl == shareNames.count {
@@ -48,12 +49,10 @@ class MainViewController: UIViewController {
             
             guard let selfish = self else {return}
             NSLayoutConstraint.activate([
-                
                 label.topAnchor.constraint(equalTo: selfish.view.safeAreaLayoutGuide.topAnchor),
                 label.heightAnchor.constraint(equalToConstant: 80),
                 label.widthAnchor.constraint(equalToConstant: selfish.view.frame.width+30),
                 label.leadingAnchor.constraint(equalTo: selfish.view.trailingAnchor, constant: -50)
-                
             ])
             
             UIView.animate(withDuration: 4, delay:0,
